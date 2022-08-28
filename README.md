@@ -14,7 +14,7 @@ In this problem set, there are three problems: 1) website development 2) machine
 
 ## Problem 2 -- Machine learning
 
-**Problem**: Please download the [pin.7z](https://uofi.box.com/s/mc4nnkbb4afxp80sx8fgmkmjeevwl3pu) file and once extracted, you will have a few .pin files. These are peptide identifications files, in tsv format, with different parameters in different columns. Your goal is to train a model (use your favorite framework) to use the following columns: 
+**Problem**: Please download the [pin.7z](https://uofi.box.com/s/mc4nnkbb4afxp80sx8fgmkmjeevwl3pu) file and once extracted, you will have a few .pin files. These are peptide identifications files, in tsv format, with different parameters in different columns. Your goal is to train a model (use your favorite framework) to use the following columns (you can use less, but no more than the following columns): 
 
 | ExpMass | rank | abs_ppm | abs_mass_diff | log10_evalue | hyperscore | delta_hyperscore | matched_ion_num | matched_ion_fraction | peptide_length | ntt  | nmc  | charge_1 | charge_2 | charge_3 | charge_4 | charge_5 | charge_6 | charge_7 |
 | ------- | ---- | ------- | ------------- | ------------ | ---------- | ---------------- | --------------- | -------------------- | -------------- | ---- | ---- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
