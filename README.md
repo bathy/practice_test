@@ -1,6 +1,6 @@
 #  Test problem set 1 -- Gao lab
 
-In this problem set, there are three problems: 1) website development 2) machine learning 3) algorithm and data structure. Please choose at least one of the problems and solve it on your own, then return your full answer in the requested format to me by email or a link in email. For each problem, you need to time yourself and send me how long it took you to achieve your final answer. This time will be used to set the future expectation for your work, so please be honest about it.
+In this problem set, there are three problems: 1) website development 2) machine learning 3) algorithm and data structure. Please choose at least one of the problems and solve it on your own (google, stackexchange, stackoverflow, textbook, etc. are all allowed, but do not consult with others), then return your full answer in the requested format to me by email or a link (if files are big) in email. For each problem, you need to time yourself and send me how long it took you to achieve your final answer. This time will be used to set the future expectations for your work, so please be honest about it.
 
 
 
