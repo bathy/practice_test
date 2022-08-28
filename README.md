@@ -1,6 +1,6 @@
 #  Test problem set 1 -- Gao lab
 
-In this problem set, there are three problems: 1) website development 2) machine learning 3) algorithm and data structure. Please choose at least one of the problems and solve it on your own (google, stackexchange, stackoverflow, textbook, etc. are all allowed, but do not consult with others), then return your full answer in the requested format to me by email or a link (if files are big) in email. For each problem, you need to time yourself and send me how long it took you to achieve your final answer. This time will be used to set the future expectations for your work, so please be honest about it.
+In this problem set, there are three problems: 1) website development 2) machine learning 3) algorithm and data structure. Please choose at least one of the problems and solve it on your own (google, stackexchange, stackoverflow, textbook, etc. are all allowed, but do not consult with others), then return your full answer in the requested format to me by email or a link (if files are big) in email. For each problem, you need to time yourself and send me how long it took you to achieve your final answer. This time will be used to set the future expectations for your work, so please be honest about it. A partial answer with your description of how you'd like to approach it is also OK, although less preferred.
 
 
 
@@ -32,17 +32,18 @@ For model training and testing, you can split all the data in each of the pin fi
 
 ## Problem 3 -- Algorithm
 
-**Problem background**: Cleave a protein in silico with various protease specificity
+**Problem background**: Cleave a protein in silico with various protease specificity.
+
 When protease cleaves a protein, it typically has some kind of specificity. (if you are not familiar with protein, just treat it as an equivalent of a long string of letters, like: 'MMKRPQLHRMRQLAQTGSLGRTKPETAEFLGEDL', protease is an enzyme which cuts this sequence)
 
 For example, if you have a protein with the sequence of 'MMKRPQLHRMRQLAQTGSLGRTKPETAEFLGEDL', and if you use trypsin as the protease (trypsin cleaves after K and after R), then it will create the following tryptic peptides after cleavage:
 
-'MMK / R / PQLHR / MR / QLAQTGSLGR / TK / PETAEFLGEDL' ('/' indicates cleavage sites)
+'MMK / R / PQLHR / MR / QLAQTGSLGR / TK / PETAEFLGEDL' ('/' indicates trypsin cleavage sites)
 Then you will have the following sequence generated: ['MMK', 'R', 'PQLHR', 'MR', 'QLAQTGSLGR', 'TK', 'PETAEFLGEDL' ]
 
 If you consider the more complex rule of trypsin cleavage, trypsin cleaves after K and R but will not cleave before a P (P is steric hindered), then it will create the following peptides: 
 
-'MMK / RPQLHR / MR / QLAQTGSLGR / TKPETAEFLGEDL' ('/' indicates cleavage sites)
+'MMK / RPQLHR / MR / QLAQTGSLGR / TKPETAEFLGEDL' ('/' indicates trypsin cleavage sites)
 Then you will have the following sequence generated: ['MMK', 'RPQLHR', 'MR', 'QLAQTGSLGR', 'TKPETAEFLGEDL']
 
 Here is the full trypsin rule that we are going to use for this problem: 
@@ -59,6 +60,8 @@ Sometimes, trypsin will not follow the rule completely, meaning that it can have
 
 2. Semi-specific cleavage, which means that at least one end (left end or the right end) of the resulting peptides follows the cleavage rule, the other end may or may not follow the same rule. Please note that the beginning and the end of the protein 'M' and 'L' in this case, are considered as correct cleavage sites. For example, under semi-specific cleavage rule, the following sequences are possible: ['MMK', 'MM' (left end following the rule, right end doesn't), 'MK' (right end following the rule, left end doesn't), 'M' (left end following the rule, right end doesn't) , 'K' (right end following the rule, left end doesn't)].
 
-USE THIS TO VERIFY IF YOU UNDERSTAND THE BACKGROUND CORRECTLY: The cleavage of protein "MMKRPQLHRMRQLAQTGSLGRTKPETAEFLGEDL" using the above cleavage rule (\[KR\](?=\[^P\]))|((?<=W)K(?=P))|((?<=M)R(?=P)), allowing ≤2 miscleavages, and allowing "semi-specific" cleavage will result in total 110 unique sequences.
+**USE THIS TO VERIFY IF YOU UNDERSTAND THE BACKGROUND CORRECTLY**: The cleavage of protein "MMKRPQLHRMRQLAQTGSLGRTKPETAEFLGEDL" using the above cleavage rule (\[KR\](?=\[^P\]))|((?<=W)K(?=P))|((?<=M)R(?=P)), allowing ≤2 miscleavages, and allowing "semi-specific" cleavage will result in total 110 unique sequences.
+
+**You can take a look at this code** (not completely correct and very slow, but useful to understand the ideas): [other people's implementation](https://github.com/yafeng/trypsin/blob/master/trypsin.py)
 
 **Problem and Answer format**: Read the [protein_seq.txt](https://github.com/bathy/practice_test/blob/main/protein_seq.txt) file as input (one protein sequence per line, 100 proteins in total), and write all the unique sequences (sorted by length and alphabetically) into a sequence.txt file, one sequence per line. Please zip  your code, your sequence.txt file together. Your code will be evaluated on accuracy and speed.
