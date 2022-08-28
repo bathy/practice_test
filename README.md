@@ -14,7 +14,7 @@ In this problem set, there are three problems: 1) website development 2) machine
 
 ## Problem 2 -- Machine learning
 
-**Problem**: Please download the pin.7z file and once extracted, you will have a few .pin files. These are peptide identifications, in tsv format, with different parameters in different columns. Your goal is to train a model (use your favorite framework, but please use python if you can) to use the following columns: 
+**Problem**: Please download the [pin.7z](https://uofi.box.com/s/mc4nnkbb4afxp80sx8fgmkmjeevwl3pu) file and once extracted, you will have a few .pin files. These are peptide identifications files, in tsv format, with different parameters in different columns. Your goal is to train a model (use your favorite framework) to use the following columns: 
 
 | ExpMass | rank | abs_ppm | abs_mass_diff | log10_evalue | hyperscore | delta_hyperscore | matched_ion_num | matched_ion_fraction | peptide_length | ntt  | nmc  | charge_1 | charge_2 | charge_3 | charge_4 | charge_5 | charge_6 | charge_7 |
 | ------- | ---- | ------- | ------------- | ------------ | ---------- | ---------------- | --------------- | -------------------- | -------------- | ---- | ---- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
@@ -24,7 +24,7 @@ to predict [Label] column (-1 or 1, a binary classification problem)
 | Label |
 |-------|
 
-**Answer format**: Please download the test.7z file and replace the [Label] column with your predicted value (either 1 or -1). Please zip all your codes and your predicted pin file into a single file and share it with me. No need to include the original training file from the pin.7z. You should also include a README file to explain briefly what you did and if any specific packages are needed to run your model. Your model will be evaluated on both speed and accuracy.
+**Answer format**: Please download the [test.7z](https://github.com/bathy/practice_test/blob/main/test.7z) file and replace the [Label] column with your predicted value (either 1 or -1). Please zip all your codes and your predicted pin file into a single file and share it with me. No need to include the original training file from the pin.7z. You should also include a README file to explain briefly what you did and if any specific packages are needed to run your model. Your model will be evaluated on both speed and accuracy.
 
 
 
@@ -59,4 +59,4 @@ Sometimes, trypsin will not follow the rule completely, meaning that it can have
 
 USE THIS TO VERIFY IF YOU UNDERSTAND THE BACKGROUND CORRECTLY: The cleavage of protein "MMKRPQLHRMRQLAQTGSLGRTKPETAEFLGEDL" using the above cleavage rule (\[KR\](?=\[^P\]))|((?<=W)K(?=P))|((?<=M)R(?=P)), allowing ≤2 miscleavages, and allowing "semi-specific" cleavage will result in total 110 unique sequences.
 
-**Problem and Answer format**: Read the protein_seq.txt file as input (one protein sequence per line, 100 proteins in total), and write all the unique sequences (sorted by length and alphabetically) into a sequence.txt file, one sequence per line. Please zip  your code, your sequence.txt file together.
+**Problem and Answer format**: Read the [protein_seq.txt](https://github.com/bathy/practice_test/blob/main/protein_seq.txt) file as input (one protein sequence per line, 100 proteins in total), and write all the unique sequences (sorted by length and alphabetically) into a sequence.txt file, one sequence per line. Please zip  your code, your sequence.txt file together. Your code will be evaluated on accuracy and speed.
