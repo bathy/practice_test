@@ -14,17 +14,19 @@ In this problem set, there are three problems: 1) website development 2) machine
 
 ## Problem 2 -- Machine learning
 
-**Problem**: Please download the [pin.7z](https://uofi.box.com/s/mc4nnkbb4afxp80sx8fgmkmjeevwl3pu) file and once extracted, you will have a few .pin files. These are peptide identifications files, in tsv format, with different parameters in different columns. Your goal is to train a model (use your favorite framework) to use the following columns (you can use less, but no more than the following columns): 
+**Problem**: Please download the [pin.7z](https://uofi.box.com/s/mc4nnkbb4afxp80sx8fgmkmjeevwl3pu) file and once extracted, you will have a few .pin files. These are peptide identifications files, in tsv format, with different parameters in different columns. Your goal is to train a model using the following columns (you can use less, but no more than the following columns) to predict the [Label] column: 
 
 | ExpMass | rank | abs_ppm | abs_mass_diff | log10_evalue | hyperscore | delta_hyperscore | matched_ion_num | matched_ion_fraction | peptide_length | ntt  | nmc  | charge_1 | charge_2 | charge_3 | charge_4 | charge_5 | charge_6 | charge_7 |
 | ------- | ---- | ------- | ------------- | ------------ | ---------- | ---------------- | --------------- | -------------------- | -------------- | ---- | ---- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
 |         |      |         |               |              |            |                  |                 |                      |                |      |      |          |          |          |          |          |          |          |
 
-to predict [Label] column (-1 or 1, a binary classification problem)
+This should be your [Label] column (-1 or 1, a binary classification problem), and your classification target for test data.
 | Label |
 |-------|
 
-**Answer format**: Please download the [test.7z](https://github.com/bathy/practice_test/blob/main/test.7z) file and replace the [Label] column with your predicted value (either 1 or -1). Please zip all your codes and your predicted pin file into a single file and share it with me. No need to include the original training file from the pin.7z. You should also include a README file to explain briefly what you did and if any specific packages are needed to run your model. Your model will be evaluated on both speed and accuracy.
+For model training and testing, you can split all the data in each of the pin file freely into training and test dataset and verify your model.
+
+**Answer format**: Please download the [test.7z](https://github.com/bathy/practice_test/blob/main/test.7z) file and replace the [Label] column with your predicted value (either 1 or -1, currently all 0, meaning UNKNOWN). Please zip all your codes and your predicted pin file into a single file and share it with me. No need to include the original training file from the pin.7z. You should also include a README file to explain briefly what you did and if any specific packages are needed to run your model. Your model will be evaluated on both speed and accuracy.
 
 
 
